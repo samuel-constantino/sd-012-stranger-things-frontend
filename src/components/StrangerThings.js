@@ -13,15 +13,16 @@ const {
   REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
 
 console.log(REACT_APP_HAWKINS_URL);
+console.log(REACT_APP_HAWKINS_TIMEOUT);
 
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
-  timeout: REACT_APP_HAWKINS_TIMEOUT,
+  timeout: +REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
   url: REACT_APP_UPSIDEDOWN_URL,
-  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
+  timeout: +REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
